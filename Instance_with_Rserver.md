@@ -47,7 +47,10 @@ echo mwarita1:pwformwarita | chpasswd
 - Click “Next:Add Tags” and add nothing.
 - Click”Next: Security Group”
 
-### 6.	In “Configuring the security group” page, check “create new security group” and set them like below.
+### 6.	In “Configuring the security group” page
+- Check “create new security group” and set them like below.
+    SSH - TCP - 22(default value) - Anywhere - 0.0.0.0/0
+    Custom TCP - TCP - 8787 - Anywhere - 0.0.0.0/0
  
 It seems
 -Choosing type “SSH” for the default proposed Port Range 22
@@ -56,22 +59,17 @@ It seems
 (I don’t know the reaon. Here are the description from the instruction URL)
 In the EC2 launch wizard, you define a security group, which acts as a virtual firewall that controls the traffic for one or more instances. For your R-based analysis environment, you have to open up port 8787 for RStudio Server and port 3838 for Shiny Server.
 
-### 10.	Click “Review and Launch”
-### 11.	Click “Launch”
-### 12.	Choose “Choose a key pair” which I created before.
+### 7.	Click “Review and Launch” and “Launch”
 
-Here is the proof I launched an instance ＼(ﾟ▽ﾟ=))／…
+### 8.	Choose “Choose a key pair” which I created before.
 
- 
-
-
-And this is the proof that I successfully launched R studio on AWS and I can access it from WWW.
+### 9. Check whether I can access R-studio from web-browser
+Address will change everytime we launch the instance.
 http://ec2-52-16-199-204.eu-west-1.compute.amazonaws.com:8787
  
-
-
-But unfortunately, something was wrong with my username & password settings.
-I couldn’t login…
+## Issue
+By this procedure, unfortunately, something was wrong with my username & password settings.
+Need to figure out why...
 
 
 
