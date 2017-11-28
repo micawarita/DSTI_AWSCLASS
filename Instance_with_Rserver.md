@@ -1,7 +1,6 @@
 # How to launch instance with R server
 
 This document is create with reference to the instruction below
-
 https://aws.amazon.com/blogs/big-data/running-r-on-aws/
 
 ### 1.	Login to AWS console
