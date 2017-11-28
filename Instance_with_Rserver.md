@@ -7,13 +7,12 @@ https://aws.amazon.com/blogs/big-data/running-r-on-aws/
 -	Login to RosettaHub
 -	Click “Go to AWS Console”
 
-### 2.	Click EC2 and click Launch Instance
-### 3.	Choose Amazon Linux AMI 2017.09.1 (HVM), SSD Volume Type
-### 4.	Choose t2.micro (Free tier eligible) and click “Next: Configure Instance Details”
-### 5.	In Configure Instance Details page,
+### 2.	Click EC2 and Launch Instance
+- Choose Amazon Linux AMI 2017.09.1 (HVM), SSD Volume Type
+- Choose t2.micro (Free tier eligible) and click “Next: Configure Instance Details”
+
+### 3.	In Configure Instance Details page
 -	Go to “advanced details” tab, copy this code to install install R, RStudio Server.
--	Change “IAM Role” from default to “EMR_EC2_DefaultRole”
--	Leave other settings as default
 
 ```
 #!/bin/bash
@@ -38,13 +37,18 @@ rm shiny-server-1.5.4.869-rh5-x86_64.rpm
 useradd mwarita1
 echo mwarita1:pwformwarita | chpasswd 
 ```
+### 4.	Stay in Configure Instance Details page and 
+-	Change “IAM Role” from default to “EMR_EC2_DefaultRole”
+-	Leave other settings as default
 
-### 6.	Click “Next:Add strage”  and keep the default setting.
-### 7.	Click “Next:Add Tags” and add nothing.
-### 8.	Click”Next: Security Group”
-### 9.	In “Configuring the security group” page, check “create new security group” and set them like below.
+
+### 5.	Leave Configure Instance Details page and 
+- Click “Next:Add strage”  and keep the default setting.
+- Click “Next:Add Tags” and add nothing.
+- Click”Next: Security Group”
+
+### 6.	In “Configuring the security group” page, check “create new security group” and set them like below.
  
-
 It seems
 -Choosing type “SSH” for the default proposed Port Range 22
 -Adding new type “Custom TCP” and putting 8787 for Port Range is critical matter. 
@@ -55,9 +59,6 @@ In the EC2 launch wizard, you define a security group, which acts as a virtual f
 ### 10.	Click “Review and Launch”
 ### 11.	Click “Launch”
 ### 12.	Choose “Choose a key pair” which I created before.
-
-
-
 
 Here is the proof I launched an instance ＼(ﾟ▽ﾟ=))／…
 
