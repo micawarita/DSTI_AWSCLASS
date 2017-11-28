@@ -1,5 +1,6 @@
 # DSTI_AWSCLASS
-Documents to explain procedures to create some AWS instance are placed in this folder.
+This folder is created fo store documents that explain procedures how to launch AWS instance.
 
 <link> How to launch instance with R server
+
 <link> How to launch instance with Public and Private Subnet.
