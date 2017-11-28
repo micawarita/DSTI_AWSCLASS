@@ -60,10 +60,9 @@ It seems
 In the EC2 launch wizard, you define a security group, which acts as a virtual firewall that controls the traffic for one or more instances. For your R-based analysis environment, you have to open up port 8787 for RStudio Server and port 3838 for Shiny Server.
 
 ### 7.	Click “Review and Launch” and “Launch”
+- Choose “Choose a key pair” which I created before.
 
-### 8.	Choose “Choose a key pair” which I created before.
-
-### 9. Check whether I can access R-studio from web-browser
+### 8. Check whether I can access R-studio from web-browser
 Address will change everytime we launch the instance.
 http://ec2-52-16-199-204.eu-west-1.compute.amazonaws.com:8787
  
